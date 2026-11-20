@@ -1,0 +1,14 @@
+
+# Capteur : ecriture sur ses propres topics
+user capteur01
+topic write agri/ferme01/parcelle01/capteur01/telemetry
+topic write agri/ferme01/parcelle01/capteur01/status
+
+# Node-RED : lecture des donnees et ecriture d'alertes
+user nodered
+topic read agri/ferme01/#
+topic write agri/ferme01/alertes/#
+
+# Superviseur : lecture seule
+user superviseur
+topic read agri/ferme01/#
